@@ -1,0 +1,22 @@
+<?php 
+								if($mobiles != NULL){
+									foreach ($mobiles as $mobile){}
+								}
+							?>
+
+
+
+<?php 
+								echo $mobiles;
+								if($mobiles != NULL){
+									foreach ($mobiles as $mobile){
+										echo "
+												<form action='EditMobile.php'>
+													<img src='".$mobile->ImageUrl."' alt='dsadas' />
+													<p style='float: right;'>".$mobile->Price." : ".$DB->getBrandById($mobile->BrandID)->Name." | ".$mobile->Model." </p>
+													<input type='submit' value='Edit' class='btn btn-info'>
+												</form>
+											";
+									}
+								}
+							?>
